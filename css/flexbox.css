@@ -8,8 +8,26 @@
 }
 
 .cabecalho__pesquisar__item {
-    display: none
-    ;
+    display: none;
+}
+
+    /*SEÇÃO SUPERIOR */
+
+.superior__secao__container {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    /*Bara de rolagem */
+    overflow: scroll;
+    /*^^^^^^^^^^^^^^*/
+    gap: 15px;
+}
+
+   /*RODAPÉ*/
+
+.rodape__container {
+    display: flex;
+    flex-flow: column wrap;
 }
 
 @media (min-width: 834px) {
@@ -17,4 +35,10 @@
         display: block ;
     }
     
+        /*RODAPÉ*/
+
+    .rodape__container{
+        justify-content: space-between;
+    }
+
 }
