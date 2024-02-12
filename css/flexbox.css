@@ -1,3 +1,4 @@
+ /*CABEÇALHO*/
 
 .cabecalho__container {
     display: flex;
@@ -23,6 +24,37 @@
     gap: 15px;
 }
 
+    /*MENU */
+
+.menu__container{
+    position: fixed; /* posição fiquisada*/
+    bottom: 0%;     /*lugar onde e fiquisada*/
+    height: 74px;   /*Altura ocupada*/
+    width: 100%;    /*Lagura ocubada*/
+}
+
+.menu__lista {
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.menu__lista  li {
+    align-self: center;
+}
+
+.menu__itens {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+    /* Para celicionarclase com o mesmo nome*/
+.menu__lista:nth-child(2),
+.menu__lista:nth-child(3),
+.menu__lista:nth-child(4) {
+    display: none;
+}
+
    /*RODAPÉ*/
 
 .rodape__container {
@@ -31,14 +63,76 @@
 }
 
 @media (min-width: 834px) {
+
+    /*CABEÇALHO*/
+
     .cabecalho__pesquisar__item{
         display: block ;
     }
     
+    /*Menu*/
+
+    .menu__container{ 
+        left: 0;
+        height: auto;
+        width: 74px;
+        top: 80px;
+    }
+
+
+    .menu__lista {
+       flex-direction: column;
+       justify-content: flex-start;
+       padding-top: 15px;
+       gap: 33px;
+       }
+
         /*RODAPÉ*/
 
     .rodape__container{
         justify-content: space-between;
     }
+}
 
+    @media(min-width: 1440px) {
+    /*Menu lateral*/
+
+    .menu__container{
+        width: 239px;
+        overflow: scroll;
+    }
+
+    .menu__lista:nth-child(2),
+    .menu__lista:nth-child(3),
+    .menu__lista:nth-child(4) {
+        display: flex;
+    }
+
+    .menu__lista {
+        height: auto;
+        padding: 20px 17 px 20px 15px;
+        gap: 15px;
+    }
+
+    .menu__itens {
+        flex-direction: rom;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .menu__lista:nth-child(3){
+        flex-direction: column-reverse; /*Pra colocar a lista de traz pra frente*/
+    }
+    .jogos{
+        order: 3;/*pra colocarem ordem que eu quiser*/
+    }
+    .filmes {
+        order: 2;
+    }
+    .premiun{
+        order: 1;
+    }
+    .maispagina {
+        order: 4;
+    }
 }
